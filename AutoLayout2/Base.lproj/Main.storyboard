@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayout2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mds-WW-3TI">
+                                <rect key="frame" x="35.666666666666664" y="211" width="104" height="118"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="seG-wt-wCO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GWz-fO-r9E">
+                                <rect key="frame" x="155.66666666666666" y="211" width="104" height="118"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="female" translatesAutoresizingMaskIntoConstraints="NO" id="u3T-Jo-FpH">
+                                <rect key="frame" x="177" y="233" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUT-nf-Qv1">
+                                <rect key="frame" x="274.66666666666663" y="211" width="104" height="118"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="other" translatesAutoresizingMaskIntoConstraints="NO" id="b4F-GZ-0hB">
+                                <rect key="frame" x="296" y="233" width="60" height="60"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Birth Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uf6-7Z-n47">
+                                <rect key="frame" x="129.66666666666666" y="385" width="166.99999999999997" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="B0S-Pg-4op">
+                                <rect key="frame" x="45.666666666666657" y="413" width="323" height="223"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hide Birthday from Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-Gi-PSQ">
+                                <rect key="frame" x="76.666666666666686" y="711" width="201" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ce-IZ-0YC">
+                                <rect key="frame" x="290.66666666666669" y="711" width="38" height="31"/>
+                            </switch>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkp-Wo-4yV">
+                                <rect key="frame" x="87.666666666666686" y="763" width="240" height="44"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ut-mn-gfK">
+                                <rect key="frame" x="133.66666666666666" y="165" width="146.99999999999997" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete your profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4J-Kl-udO">
+                                <rect key="frame" x="114.66666666666669" y="102" width="185" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="boySelected" translatesAutoresizingMaskIntoConstraints="NO" id="VMy-es-ikc">
+                                <rect key="frame" x="57.666666666666664" y="227" width="60" height="60"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G4J-Kl-udO" secondAttribute="trailing" constant="114.5" id="0U3-aV-hbd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Uf6-7Z-n47" secondAttribute="bottom" constant="453" id="0oq-3Q-RDv"/>
+                            <constraint firstItem="vkp-Wo-4yV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="719" id="4Em-Rc-gHa"/>
+                            <constraint firstItem="b4F-GZ-0hB" firstAttribute="leading" secondItem="oUT-nf-Qv1" secondAttribute="leading" constant="22" id="4yV-Zk-Z1d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Ut-mn-gfK" secondAttribute="bottom" constant="673" id="89B-li-Knw"/>
+                            <constraint firstItem="GWz-fO-r9E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A4m-38-Goz"/>
+                            <constraint firstItem="VMy-es-ikc" firstAttribute="leading" secondItem="mds-WW-3TI" secondAttribute="leading" constant="22" id="Aqp-Li-HrP"/>
+                            <constraint firstItem="B0S-Pg-4op" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="369" id="CTe-WB-h9g"/>
+                            <constraint firstItem="VMy-es-ikc" firstAttribute="bottom" secondItem="mds-WW-3TI" secondAttribute="bottom" constant="-42" id="GEZ-Cb-Rhb"/>
+                            <constraint firstAttribute="trailing" secondItem="B0S-Pg-4op" secondAttribute="trailing" constant="45.5" id="GVo-fG-fTJ"/>
+                            <constraint firstItem="VMy-es-ikc" firstAttribute="trailing" secondItem="mds-WW-3TI" secondAttribute="trailing" constant="-22" id="Ick-G8-zKN"/>
+                            <constraint firstItem="G4J-Kl-udO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="Iub-rN-wrh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vkp-Wo-4yV" secondAttribute="bottom" constant="63" id="JXx-8o-Khy"/>
+                            <constraint firstItem="oUT-nf-Qv1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="167" id="JlM-p4-pnz"/>
+                            <constraint firstItem="Uf6-7Z-n47" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="341" id="MgF-om-zx9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GWz-fO-r9E" secondAttribute="bottom" constant="533" id="N2S-ZF-gWY"/>
+                            <constraint firstItem="oUT-nf-Qv1" firstAttribute="leading" secondItem="GWz-fO-r9E" secondAttribute="trailing" constant="16" id="NXd-KM-EUG"/>
+                            <constraint firstItem="GWz-fO-r9E" firstAttribute="leading" secondItem="mds-WW-3TI" secondAttribute="trailing" constant="16" id="RVO-IL-g56"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uf6-7Z-n47" secondAttribute="trailing" constant="117.5" id="SVs-2f-G15"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZaN-Gi-PSQ" secondAttribute="bottom" constant="130" id="VxJ-Gu-Ibc"/>
+                            <constraint firstItem="oUT-nf-Qv1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-35.5" id="WcV-xF-esr"/>
+                            <constraint firstItem="7Ce-IZ-0YC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-128" id="Yds-aJ-8d0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mds-WW-3TI" secondAttribute="bottom" constant="533" id="ZJU-n0-Fy1"/>
+                            <constraint firstItem="ZaN-Gi-PSQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76.5" id="bzo-74-VBj"/>
+                            <constraint firstItem="vkp-Wo-4yV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87.5" id="dEy-YP-o9K"/>
+                            <constraint firstItem="7Ce-IZ-0YC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="290.5" id="i7c-mN-Myo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B0S-Pg-4op" secondAttribute="bottom" constant="234" id="itA-tX-iIb"/>
+                            <constraint firstItem="8Ut-mn-gfK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133.5" id="jBd-4k-yyw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oUT-nf-Qv1" secondAttribute="bottom" constant="533" id="kFt-Gw-NwU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vkp-Wo-4yV" secondAttribute="trailing" constant="86.5" id="kY7-ge-D8L"/>
+                            <constraint firstItem="mds-WW-3TI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35.5" id="m7u-Lo-lap"/>
+                            <constraint firstItem="b4F-GZ-0hB" firstAttribute="top" secondItem="oUT-nf-Qv1" secondAttribute="top" constant="16" id="mVa-cP-cb2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G4J-Kl-udO" secondAttribute="bottom" constant="740" id="nR2-u3-OeQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Ce-IZ-0YC" secondAttribute="trailing" constant="87.5" id="nav-WP-Dhp"/>
+                            <constraint firstItem="Uf6-7Z-n47" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129.5" id="neI-kZ-xoh"/>
+                            <constraint firstItem="GWz-fO-r9E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="167" id="p7O-vm-DM9"/>
+                            <constraint firstItem="8Ut-mn-gfK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="121" id="pBt-RO-gF7"/>
+                            <constraint firstItem="7Ce-IZ-0YC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="667" id="qHH-Vf-Jts"/>
+                            <constraint firstItem="mds-WW-3TI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="167" id="qvS-PB-caH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZaN-Gi-PSQ" secondAttribute="trailing" constant="136.5" id="tvQ-Ot-KkH"/>
+                            <constraint firstItem="G4J-Kl-udO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114.5" id="vLz-pt-d3Z"/>
+                            <constraint firstItem="B0S-Pg-4op" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45.5" id="vOQ-kG-XlQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Ut-mn-gfK" secondAttribute="trailing" constant="133.5" id="xLz-fQ-SaW"/>
+                            <constraint firstItem="ZaN-Gi-PSQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="667" id="yYa-Cl-l0s"/>
+                            <constraint firstItem="VMy-es-ikc" firstAttribute="top" secondItem="mds-WW-3TI" secondAttribute="top" constant="16" id="zux-wN-ccP"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem id="Vjd-N9-gQg"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imgView1" destination="mds-WW-3TI" id="pNU-IT-fMq"/>
+                        <outlet property="imgView2" destination="GWz-fO-r9E" id="J0e-hZ-XlX"/>
+                        <outlet property="imgView3" destination="oUT-nf-Qv1" id="Rbs-tO-ugE"/>
+                        <outlet property="nextButton" destination="vkp-Wo-4yV" id="Hrg-32-rEt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55.072463768115945" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="boySelected" width="60" height="60"/>
+        <image name="female" width="60" height="60"/>
+        <image name="other" width="60" height="60"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
