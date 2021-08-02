@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+    <device id="retina6_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,76 +13,93 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayout2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mds-WW-3TI">
-                                <rect key="frame" x="35.5" y="167" width="94.5" height="94.5"/>
+                                <rect key="frame" x="35.666666666666664" y="211" width="107.66666666666669" height="122"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GWz-fO-r9E">
-                                <rect key="frame" x="141" y="167" width="93" height="94.5"/>
+                                <rect key="frame" x="160.66666666666666" y="211" width="106.66666666666666" height="122"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="female" translatesAutoresizingMaskIntoConstraints="NO" id="u3T-Jo-FpH">
-                                <rect key="frame" x="160.5" y="189" width="54" height="45"/>
+                                <rect key="frame" x="183" y="233" width="62" height="58"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oUT-nf-Qv1">
-                                <rect key="frame" x="245.5" y="167" width="94" height="94.5"/>
+                                <rect key="frame" x="285" y="211" width="107.66666666666669" height="122"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="other" translatesAutoresizingMaskIntoConstraints="NO" id="b4F-GZ-0hB">
-                                <rect key="frame" x="265" y="189" width="54.5" height="45"/>
+                                <rect key="frame" x="307.66666666666669" y="233" width="62" height="58"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Birth Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uf6-7Z-n47">
-                                <rect key="frame" x="107.5" y="341" width="160" height="14"/>
+                                <rect key="frame" x="134.33333333333337" y="385" width="159.66666666666663" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="B0S-Pg-4op">
-                                <rect key="frame" x="47.5" y="369" width="280" height="155.5"/>
+                                <rect key="frame" x="54" y="413" width="320" height="216"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="0Aq-Sd-Ijc"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkp-Wo-4yV">
-                                <rect key="frame" x="84" y="650" width="207" height="21.5"/>
+                                <rect key="frame" x="96" y="694" width="236" height="30"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="NextClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z2c-eh-WdA"/>
+                                    <action selector="nextClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CpY-gc-FzA"/>
+                                    <segue destination="aul-6z-vH8" kind="show" identifier="showDetails" id="sbM-qc-d0n"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Gender" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ut-mn-gfK">
-                                <rect key="frame" x="117" y="121" width="141" height="14"/>
+                                <rect key="frame" x="133.66666666666666" y="165" width="160.99999999999997" height="19.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete your profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4J-Kl-udO">
-                                <rect key="frame" x="103.5" y="65.5" width="168" height="15.5"/>
+                                <rect key="frame" x="118.33333333333333" y="109.66666666666667" width="191.33333333333337" height="19.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boySelected" translatesAutoresizingMaskIntoConstraints="NO" id="VMy-es-ikc">
-                                <rect key="frame" x="55.5" y="189" width="54.5" height="45"/>
+                                <rect key="frame" x="58.333333333333343" y="233" width="62" height="58"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRM-rK-gk4">
-                                <rect key="frame" x="66.5" y="221.5" width="33" height="30"/>
+                                <rect key="frame" x="73" y="293" width="33" height="30"/>
                                 <state key="normal" title="Male">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="genderSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ACR-z0-8ql"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csr-Nw-RVx">
                                 <rect key="frame" x="190" y="299" width="50" height="30"/>
                                 <state key="normal" title="Female">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="genderSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ScE-52-tiM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vr4-ZQ-wNi">
                                 <rect key="frame" x="320" y="299" width="47" height="30"/>
                                 <state key="normal" title="Others">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="genderSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwo-p1-p7s"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cm4-CX-lUG">
                                 <rect key="frame" x="96" y="621" width="254" height="31"/>
@@ -160,6 +177,7 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="datePicker" destination="B0S-Pg-4op" id="Kq3-bS-Mk3"/>
                         <outlet property="imgView1" destination="mds-WW-3TI" id="pNU-IT-fMq"/>
                         <outlet property="imgView2" destination="GWz-fO-r9E" id="J0e-hZ-XlX"/>
                         <outlet property="imgView3" destination="oUT-nf-Qv1" id="Rbs-tO-ugE"/>
@@ -169,6 +187,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-56.074766355140184" y="93.30453563714903"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="M69-qg-r6J">
+            <objects>
+                <viewController id="aul-6z-vH8" customClass="DetailViewController" customModule="AutoLayout2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jhc-MX-fSx">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UHW-64-fMb">
+                                <rect key="frame" x="104" y="442.66666666666669" width="220" height="40.666666666666686"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckG-p9-ZLL">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="20.333333333333332"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndH-QE-T2p">
+                                                <rect key="frame" x="0.0" y="0.0" width="61" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No gender selecteed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbQ-63-A4l">
+                                                <rect key="frame" x="61" y="0.0" width="159" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3T-NF-7pA">
+                                        <rect key="frame" x="0.0" y="20.333333333333314" width="220" height="20.333333333333329"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birtday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hs-6G-t4c">
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="No date selected" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsu-2Y-wS9">
+                                                <rect key="frame" x="59" y="0.0" width="161" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IWC-g1-Os9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UHW-64-fMb" firstAttribute="centerY" secondItem="Jhc-MX-fSx" secondAttribute="centerY" id="1Q4-1V-Clj"/>
+                            <constraint firstItem="UHW-64-fMb" firstAttribute="centerX" secondItem="Jhc-MX-fSx" secondAttribute="centerX" id="KVf-Rb-oJ2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lq7-rZ-C3e"/>
+                    <connections>
+                        <outlet property="date" destination="wsu-2Y-wS9" id="VXM-Tb-gFM"/>
+                        <outlet property="genderOfPerson" destination="qbQ-63-A4l" id="foe-Ur-9O2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epQ-wB-sG2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686.91588785046724" y="91.360691144708426"/>
         </scene>
     </scenes>
     <resources>
