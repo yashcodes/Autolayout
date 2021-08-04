@@ -4,7 +4,6 @@
 //
 //  Created by Yash on 20/07/21.
 //
-
 import UIKit
 
 class ProfileViewController: UIViewController{
@@ -37,6 +36,60 @@ class ProfileViewController: UIViewController{
         configure(sender: sender, genderInt: 2)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            super.touchesBegan(touches, with: event)
+            nameField.resignFirstResponder()
+        }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nameField.delegate = self
+        updateDate()
+        vm.setGender(strGender: vm.people[0])
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @IBAction func nextClicked(_ sender: UIButton) {
+        view.endEditing(true)
+        self.performSegue(withIdentifier: "showDetails", sender: self)
+    }
+    @IBSegueAction func makeDetailsVC(_ coder: NSCoder, sender: Any?, segueIdentifier: String?) -> DetailsViewController? {
+        return DetailsViewController(coder: coder, person: vm.person)
+    }
+    
+}
+
+//functions responding to textfield
+extension ProfileViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        vm.person.name = textField.text ?? "Enter your name"
+    }
+}
+
+// functions responding to the notification of keyboard appearing and disappear
+extension ProfileViewController{
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+           return
+        }
+      
+      self.view.frame.origin.y = 0 - keyboardSize.height
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+      self.view.frame.origin.y = 0
+    }
+}
+
+//functions to change appearences of gender buttons
+extension ProfileViewController{
     private func configure(sender : UIControl, genderInt : Int){
         resetButtonsConfiguration()
         vm.setGender(strGender: vm.people[genderInt])
@@ -91,48 +144,13 @@ class ProfileViewController: UIViewController{
         }
         return nil
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        nameField.delegate = self
-        configureTapGesture()
-        updateDate()
-        vm.setGender(strGender: vm.people[0])
-        
-    }
-    
-    private func configureTapGesture(){
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ProfileViewController.handleTap))
-        view.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc func handleTap(){
-        view.endEditing(true)
-    }
-    
-    @IBAction func nextClicked(_ sender: UIButton) {
-        view.endEditing(true)
-        self.performSegue(withIdentifier: "showDetails", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! DetailsViewController
-        destinationVC.setLabelTexts(strGender: vm.person.gender, strName: vm.person.name, strBdayDate: vm.person.bdayDate)
-    }
-    
+}
+
+//functions responding to DatePicker
+extension ProfileViewController{
     private func updateDate(){
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.short
         vm.setDate(date: dateFormatter.string(from: self.datePicker.date))
-    }
-}
-
-extension ProfileViewController: UITextFieldDelegate{
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    textField.resignFirstResponder()
-    return true
-    }
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        vm.person.name = textField.text ?? "Enter your name"
     }
 }
