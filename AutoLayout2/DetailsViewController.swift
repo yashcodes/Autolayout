@@ -9,5 +9,10 @@ class DetailsViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    func setLabelTexts(strGender: String, strName: String, strBdayDate: String){
+        genderOfPerson.text = strGender
+        nameOfPerson.text = strName
+        bdayOfPerson.text = strBdayDate
+    }
 }
 
